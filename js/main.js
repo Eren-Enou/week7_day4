@@ -59,7 +59,7 @@ let form = document.getElementById('countryForm');
 
 async function handleFormSubmit(e){
     e.preventDefault(); // Prevent the event from refreshing the page
-    // console.log(e);
+    console.log(e);
     let countryName = e.target.countryName.value;
     console.log(countryName);
 
