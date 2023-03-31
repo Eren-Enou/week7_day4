@@ -88,8 +88,10 @@ async function getCountryInfo(countryName){
 function buildCountryCard(countryObj){
 
     // Create a card div
-    let card = document.createElement('div')
+    let card = document.createElement('div');
     card.className = 'card h-100';
+
+   
 
     // Create a top image for card
     let image = document.createElement('img');

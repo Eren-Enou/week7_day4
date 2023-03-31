@@ -18,12 +18,14 @@ function buildToDoCard(toDoObj){
     // Create a card div
     let card = document.createElement('div')
     card.className = 'card h-100';
+
+    
     
     // Create card body
     let cardBody = document.createElement('div');
     cardBody.className = 'card-body';
     
-    // Create country name and population elements
+    // Create To Do name
     let toDoTitle = document.createElement('h5');
     toDoTitle.className = 'card-title';
     toDoTitle.innerHTML = toDoObj;
@@ -35,6 +37,7 @@ function buildToDoCard(toDoObj){
     
     // Add card body to card
     card.append(cardBody);
+    
 
     // Create a column for the row
     let col = document.createElement('div')
@@ -46,5 +49,15 @@ function buildToDoCard(toDoObj){
     // Get the country display and add the column
     let display = document.getElementById('toDoDisplay');
     display.append(col);
+
+    //Create a button
+    let button = document.createElement('button');
+    button.className= 'btn btn-danger';
+    button.innerHTML = 'Click to delete';
+    button.onclick = function () {
+        card.remove();
+        col.remove();
+    }
+    card.append(button);
 
 }
